@@ -1,0 +1,185 @@
+.catalog-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 28px 72px;
+}
+
+.catalog-page__head {
+  margin-bottom: 40px;
+}
+
+.catalog-page__title {
+  margin: 0 0 12px;
+  font-family: var(--font-body);
+  font-size: clamp(40px, 8vw, 92px);
+  font-weight: 700;
+  line-height: 0.88;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  text-shadow: 6px 6px 0 var(--color-shadow);
+}
+
+.catalog-page__title-mark {
+  display: block;
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.3em;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--color-muted);
+  text-shadow: none;
+}
+
+.catalog-page__subtitle {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* =========================================================
+   META BAR
+   ========================================================= */
+.catalog-page__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px dashed var(--color-border);
+}
+
+.catalog-page__count {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.catalog-page__count b {
+  display: inline-block;
+  background: var(--color-white);
+  color: var(--color-ink);
+  border: 2px solid var(--color-white);
+  padding: 2px 10px;
+  margin-left: 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.catalog-page__query {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* Варіант 9: індикатор того, що фільтр виконується (debounce у процесі) */
+.catalog-page__pending {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  animation: pendingPulse 1s ease-in-out infinite;
+}
+
+@keyframes pendingPulse {
+  0%, 100% { opacity: 0.35; }
+  50%      { opacity: 1; }
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+.catalog-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+.catalog-page__empty {
+  padding: 56px 28px;
+  text-align: center;
+  border: 3px dashed var(--color-border);
+  background: var(--color-surface);
+}
+
+.catalog-page__empty-title {
+  margin: 0 0 14px;
+  font-family: var(--font-body);
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+}
+
+.catalog-page__empty-text {
+  max-width: 500px;
+  margin: 0 auto 24px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.catalog-page__empty-text b {
+  background: var(--color-white);
+  color: var(--color-ink);
+  padding: 1px 8px;
+  font-weight: 700;
+}
+
+.catalog-page__empty-btn {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  background: var(--color-white);
+  border: 3px solid var(--color-white);
+  border-radius: 0;
+  padding: 14px 22px;
+  box-shadow: 5px 5px 0 var(--color-shadow);
+  cursor: pointer;
+  transition: transform .08s ease, box-shadow .08s ease,
+              background-color .12s ease, color .12s ease;
+}
+
+.catalog-page__empty-btn:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 var(--color-shadow);
+}
+
+.catalog-page__empty-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 var(--color-shadow);
+}
+
+/* =========================================================
+   АДАПТИВ
+   ========================================================= */
+@media (max-width: 640px) {
+  .catalog-page {
+    padding: 28px 18px 48px;
+  }
+}

@@ -1,0 +1,109 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 18px 28px;
+  background: var(--color-ink);
+  border-bottom: 3px solid var(--color-border);
+}
+
+.app__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.app__brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  background: var(--color-white);
+  color: var(--color-ink);
+  border: 2px solid var(--color-white);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.app__brand-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--color-ink);
+  background: var(--color-accent);
+  padding: 4px 8px;
+}
+
+.app__nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.app__nav-link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-muted);
+  padding: 8px 14px;
+  border: 2px solid transparent;
+  transition: color .12s ease, border-color .12s ease, background-color .12s ease;
+}
+
+.app__nav-link:hover,
+.app__nav-link:focus-visible {
+  color: var(--color-white);
+  border-color: var(--color-border);
+  outline: none;
+}
+
+.app__nav-link--active {
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+/* =========================================================
+   MAIN / FOOTER
+   ========================================================= */
+.app__main {
+  flex: 1;
+}
+
+.app__footer {
+  padding: 16px 28px;
+  background: var(--color-ink);
+  border-top: 3px solid var(--color-border);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.app__footer p {
+  margin: 0;
+}
